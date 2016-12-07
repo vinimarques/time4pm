@@ -1,6 +1,8 @@
 var Config = {};
 
-Config.apitoken = "";
+let apiToken = (localStorage && localStorage.apiToken) ? localStorage.apiToken : '';
+
+Config.apitoken = apiToken;
 Config.posfix = ":xxx";
 Config.company = "nodocc";
 Config.twurl = "teamwork.com/";
