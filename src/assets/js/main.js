@@ -4,6 +4,8 @@ var ReactDOM = require('react-dom');
 
 const Header = require('./components/header');
 const GetToken = require('./components/get-token');
+const TimeList = require('./components/time-list');
+
 let hasToken = (localStorage && localStorage.apiToken) ? true : false;
 
 var Main = React.createClass({
@@ -12,6 +14,7 @@ var Main = React.createClass({
 			return (
 				<div>
 					<Header />
+					<TimeList />
 				</div>
 			);
 		}
