@@ -12,12 +12,11 @@ var getToken = React.createClass({
 		});
 	},
 	handleSubmit: function (event) {
-		let apiToken = this.state.apiToken;
-
-		if (localStorage && localStorage.apiToken)
-			localStorage.apiToken = apiToken;
-
 		event.preventDefault();
+
+		let apiToken = this.state.apiToken;
+		localStorage.apiToken = apiToken;
+		window.location.reload();
 	},
 	render: function() {
 		return (
