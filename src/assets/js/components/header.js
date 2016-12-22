@@ -20,8 +20,8 @@ var Header = React.createClass({
 					Time4PM
 				</h1>
 				<h2 className="header__user">
-					<img src={this.state.user['avatar-url']} className="header__user__image" alt={this.state.user['first-name']} />
 					<span className="header__user__name">{this.state.user['first-name']} {this.state.user['last-name']}</span>
+					<div className="header__user__image"><img src={this.state.user['avatar-url']} alt={this.state.user['first-name']} /></div>
 				</h2>
 			</header>
 		);
