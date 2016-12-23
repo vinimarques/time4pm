@@ -7,10 +7,10 @@ var Time = React.createClass({
 	getInitialState (props) {
 		return {
 			data: {
-				time_start: '',
-				time_end: '',
-				project_id: null,
-				task_id: null
+				time_start: (this.props.data && this.props.data.time_start) ? this.props.data.time_start : '',
+				time_end: (this.props.data && this.props.data.time_end) ? this.props.data.time_end : '',
+				project_id: (this.props.data && this.props.data.project_id) ? this.props.data.project_id : null,
+				task_id: (this.props.data && this.props.data.task_id) ? this.props.data.task_id : null
 			},
 			projects: [],
 			tasks: []
@@ -54,25 +54,25 @@ var Time = React.createClass({
 		return (
 			<div className="time">
 				<div className="time__wrapper wrapper">
-					<div className="time__col">
+					<div className="time__col -size1">
 						<label className="time__label">
 							<span className="time__label__text label__text">Time Start:</span>
 							<input type="time" className="time__input" name="time_start" value={this.state.data.time_start} onChange={this.handleChange} />
 						</label>
 					</div>
-					<div className="time__col">
+					<div className="time__col -size1">
 						<label className="time__label">
 							<span className="time__label__text label__text">Time End:</span>
-							<input type="time" name="time_end" value={this.state.data.time_end} onChange={this.handleChange} />
+							<input type="time" className="time__input" name="time_end" value={this.state.data.time_end} onChange={this.handleChange} />
 						</label>
 					</div>
-					<div className="time__col">
+					<div className="time__col -size2">
 						<label className="time__label">
 							<span className="time__label__text label__text">Project:</span>
 							<Select name="project_id" value={this.state.data.project_id} options={this.state.projects} onChange={this.projectChange} />
 						</label>
 					</div>
-					<div className="time__col">
+					<div className="time__col -size2">
 						<label className="time__label">
 							<span className="time__label__text label__text">Task:</span>
 							<Select name="task_id" value={this.state.data.task_id} options={this.state.tasks} onChange={this.taskChange} />

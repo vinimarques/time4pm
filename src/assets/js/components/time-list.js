@@ -4,10 +4,22 @@ var TimeStorage = require('./time-storage');
 
 var TimeList = React.createClass({
 	getInitialState () {
+		let data = (TimeStorage.data) ? TimeStorage.data : {};
+		let list = [];
+		let index = 0;
+
+		if (data.times && Object.keys(data.times).length > 0) {
+			Object.keys(data.times).map(function (key) {
+				var item = data.times[key];
+				index = key;
+				list.push(<Time key={key} timeId={key} data={item} />);
+			});
+		}
+
 		return {
-			list: [],
-			key: 0,
-			date: ''
+			list: list,
+			key: index,
+			date: (data.date) ? data.date : ''
 		};
 	},
 	dateChange: function (event) {
