@@ -53,28 +53,28 @@ var Time = React.createClass({
 	render: function () {
 		return (
 			<div className="time">
-				<div className="time__wrapper">
+				<div className="time__wrapper wrapper">
 					<div className="time__col">
 						<label className="time__label">
-							<span className="time__label__text">Time Start:</span>
+							<span className="time__label__text label__text">Time Start:</span>
 							<input type="time" className="time__input" name="time_start" value={this.state.data.time_start} onChange={this.handleChange} />
 						</label>
 					</div>
 					<div className="time__col">
 						<label className="time__label">
-							<span className="time__label__text">Time End:</span>
+							<span className="time__label__text label__text">Time End:</span>
 							<input type="time" name="time_end" value={this.state.data.time_end} onChange={this.handleChange} />
 						</label>
 					</div>
 					<div className="time__col">
 						<label className="time__label">
-							<span className="time__label__text">Project:</span>
+							<span className="time__label__text label__text">Project:</span>
 							<Select name="project_id" value={this.state.data.project_id} options={this.state.projects} onChange={this.projectChange} />
 						</label>
 					</div>
 					<div className="time__col">
 						<label className="time__label">
-							<span className="time__label__text">Task:</span>
+							<span className="time__label__text label__text">Task:</span>
 							<Select name="task_id" value={this.state.data.task_id} options={this.state.tasks} onChange={this.taskChange} />
 						</label>
 					</div>

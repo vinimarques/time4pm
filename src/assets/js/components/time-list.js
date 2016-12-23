@@ -35,17 +35,15 @@ var TimeList = React.createClass({
 	},
 	render: function () {
 		return (
-			<div className="wrapper">
-				<div className="time-list">
-					<div className="time-list__header">
-						<label>
-							<span>Date:</span>
-							<input type="date" name="date" value={this.state.date} onChange={this.dateChange} />
-						</label>
-					</div>
-					<div className="time-list__body">
-						{this.state.list}
-					</div>
+			<div className="time-list">
+				<div className="time-list__header wrapper">
+					<label>
+						<span className="label__text">Date:</span>
+						<input type="date" name="date" value={this.state.date} onChange={this.dateChange} />
+					</label>
+				</div>
+				<div className="time-list__body">
+					{this.state.list}
 				</div>
 				<div className="time-list__footer">
 					<button className="btn btn-primary" onClick={this.send}>

@@ -1,17 +1,23 @@
 .header
-	padding: 30px
 	background: $color-secondary
-	display: flex
-	justify-content: space-between
-	align-items: center
+
+	.wrapper
+		padding: 30px
+		display: flex
+		justify-content: space-between
+		align-items: center
 
 	&__title
-		font-size: 20px
+		font-size: 35px
 		vertical-align: middle
 		color: $color-white
+		font-weight: bold
+		display: flex
+		align-items: center
 
 		> em
-			font-size: 25px
+			font-size: 50px
+			margin-right: 10px
 
 
 	&__user
@@ -32,3 +38,9 @@
 
 			> img
 				display: block
+
+	&__token
+		color: $color-white
+
+		> input
+			margin-left: 20px
