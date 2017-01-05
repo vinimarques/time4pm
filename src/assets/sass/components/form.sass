@@ -6,3 +6,29 @@ input
 	padding: 10px
 	box-sizing: border-box
 	border-radius: 5px
+
+button
+	font-family: 'roboto'
+	font-size: 1rem
+	color: $color-white
+	background: $color-secondary
+	padding: 10px 20px 10px 15px
+	box-sizing: border-box
+	border-radius: 5px
+	border: none
+	box-shadow: 0 1px 5px rgba(0,0,0,0.15)
+	display: flex
+	align-items: center
+	font-weight: bold
+	text-transform: uppercase
+	cursor: pointer
+
+	> em
+		margin-right: 15px
+		font-size: 1.5em
+
+	&.btn-light
+		background-color: $color-primary
+
+	&.btn-secondary
+		background-color: $color-gray-dark

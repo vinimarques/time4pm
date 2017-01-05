@@ -58,9 +58,20 @@ var TimeList = React.createClass({
 					{this.state.list}
 				</div>
 				<div className="time-list__footer">
-					<button className="btn btn-primary" onClick={this.send}>
-						Send
-					</button>
+					<div className="wrapper">
+						<button className="btn btn-secondary">
+							<em className="icon-add"></em>
+							Add Time
+						</button>
+						<button className="btn btn-secondary">
+							<em className="icon-add"></em>
+							Add Time
+						</button>
+						<button className="btn btn-primary" onClick={this.send}>
+							<em className="icon-send"></em>
+							Send
+						</button>
+					</div>
 				</div>
 			</div>
 		);
